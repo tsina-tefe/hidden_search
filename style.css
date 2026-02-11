@@ -7,11 +7,63 @@
 body{
     font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
     margin: 0;
-    background-color: rgb(98, 71, 236);
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+}
+.container{
+    position: relative;
+    height: 50px;
+    width: 56px;
+    transition: width 0.3s linear;
+}
+.show .container{
+    width: 280px;
+}
+input{
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    border: none;
+    padding: 13px;
+    font-size: 20px;
+    background-color: white;
+    display: none;
+    transition:width 0.3s ease;
+}
+.show input{
+    display: block;
+    width: 80%;
+}
+input::placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+input:focus{
+    outline: none;
+}
+button{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show button{
+    width: 20%;
+}
+img{
+    width: 30px;
 }
