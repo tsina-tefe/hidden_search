@@ -1,9 +1,8 @@
 const container = document.querySelector('.larger');
+const btn = document.querySelector('button');
+const input = document.querySelector('input');
 
-document.querySelector('button').addEventListener('click', () => {
-    if(container.classList.contains('show')) {
-        container.classList.remove('show');
-    } else {
-        container.classList.add('show');
-    }
+btn.addEventListener('click', () => {
+    container.classList.toggle('show');
+    input.focus();
 });
